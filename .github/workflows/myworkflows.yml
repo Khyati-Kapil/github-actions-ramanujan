@@ -15,6 +15,10 @@ jobs:
         steps:
             - name: Repo cloning
               uses: actions/checkout@v4 
+            - name: Setup node
+              uses: actions/setup-node@v4
+              with:
+                node-version: 18.x
             - name: Installs dependencies
               run: npm ci
             - name: Run test
