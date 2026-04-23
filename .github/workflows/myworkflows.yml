@@ -7,4 +7,9 @@ jobs:
         steps:
             - name: Print Hello
               run: echo "Hello World" 
+    second-job: 
+        runs-on: macOS-latest
+        steps:
+            - name: Print from second job
+              run: ls 
       
