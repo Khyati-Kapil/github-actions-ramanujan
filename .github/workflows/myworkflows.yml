@@ -9,7 +9,11 @@ jobs:
               run: echo "Hello World" 
     second-job: 
         runs-on: macOS-latest
+        defaults:
+            run:
+                working-directory: backend
         steps:
-            - name: Print from second job
-              run: ls 
-      
+            - name: Installs dependencies
+              run: npm install
+            - name: run test
+              run: npm test 
